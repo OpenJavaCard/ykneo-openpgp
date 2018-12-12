@@ -1,5 +1,9 @@
 language: java
-install: ant
 script: ant test
 jdk:
   - openjdk8
+before_install:
+  - sudo apt-get install -y ant junit4
+addons:
+  apt:
+    update: true
